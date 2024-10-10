@@ -1,0 +1,1121 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Portfolio Ennajy Mohamed Ayman</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <meta name="description" content="ComeOut - Modèle de CV/Portfolio en HTML5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body id="content">
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <img src="img/preloader.svg" alt="Divergent Studio">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo" >
+                <img id="logos" src="logo.png"  alt="">
+                
+            </label>
+            
+            
+            <ul id="do" class="ul">
+                
+                <li><a class="active" href="#">Acceuil</a></li>
+                <li><a href="#about-area">Àpropos</a></li>
+                <li><a href="#education-area">Éducation</a></li>
+                <li><a href="#experience-area">Expérience</a></li>
+                <li><a href="#pro-skills-area">Compétences</a></li>
+                
+                <li><a href="#slid">projet</a></li>
+                <li>
+                    <div class="custom-select">
+                        <div class="select-selected"><img style="width: 30px;" src="img/france.png" alt=""></div>
+                        <div class="select-items">
+                            <div data-url="homeFR.html"><img src="img/france.png" alt="Page 1"> Français</div>
+                            <div data-url="index.html"><img src="img/etats-unis.png" alt="Page 2">Anglais</div>
+                            
+                        </div>
+                    </div>
+                
+                </li>
+            </ul>
+        </nav>
+        <script>
+            document.querySelector('.select-selected').addEventListener('click', function() {
+                this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            document.querySelectorAll('.select-items div').forEach(item => {
+                item.addEventListener('click', function() {
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.location.href = url; // Redirect to the selected page
+                    }
+                });
+            });
+    
+            // Close the dropdown if clicked outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.custom-select')) {
+                    document.querySelector('.select-items').style.display = 'none';
+                }
+            });
+        </script>
+        <style>
+            
+            .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+}
+
+.custom-select:hover .select-items {
+    display: block; /* Show dropdown on hover */
+}
+
+.select-items {
+    position: absolute;
+    background-color: #313131;
+    border: 1px solid #313131;
+    z-index: 99;
+    display: none;
+    width: 130px; /* Adjust this width as needed */
+    right: 0; /* Align the dropdown to the left */
+}
+
+.select-items div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.select-items div img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.select-items div:hover {
+    background-color: #ddd;
+}
+
+        </style>
+        <style>
+      /*      @media screen and (min-width: 1034px) {
+    #do li a {
+        font-size: 13px;
+    }
+    .logo{
+        width: 80px;
+    }
+}*/
+#logos{
+    width: 120px;
+}
+@media screen and (min-width: 951px) {
+    #do li a {
+        padding: 16px;
+    }}
+    @media screen and (min-width: 774px) {
+    #logos{
+        width: 80px;
+    }
+    #do li a{
+        padding: 15px;
+    }
+}
+@media screen and (min-width: 769px) {
+    #logos{
+        width: 78px;
+    }
+    #do li a{
+        padding: 15px;
+    }
+}
+   
+            @media screen and (min-width: 992px) {
+                header nav{
+                    position: fixed;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        background: black;
+        left: 0;
+        transition: all 0.2s ease 0s;
+                }
+            }
+  nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+  }
+  
+ 
+  
+  .ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ul li {
+    margin-right: 20px;
+  }
+  
+  .ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15.5px;
+    transition: color 0.3s, background-color 0.3s;
+
+    padding: 24px;
+  }
+  @media only screen and (max-width:991px) {
+    .custom-select{
+        width: 21px;
+    }
+  }
+  @media only screen and (max-width:949px) {
+                .ul li a{
+                    font-size: 13px;
+                }
+                .ul li {
+    margin-right: 0px;
+}
+            }
+            @media only screen and (max-width:829px) {
+                .custom-select{
+                    width: 37px;
+                }
+            } 
+ @media only screen and (max-width:772px) {
+    .ul li a{
+        padding: 19px;
+    }
+ }            
+  
+  .ul li a:hover {
+    color: lightgreen;
+    
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+  
+    ul {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: black;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+  }
+  .ul li a:hover,
+        .ul li a.active {
+            background-color: rgb(90 90 90); /* Background color for active link */
+            color: white; /* Change text color to black for better contrast */
+            
+        }
+        
+        </style>
+        <script> document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            function changeNavbarOnScroll() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeNavbarOnScroll();
+            window.addEventListener('scroll', changeNavbarOnScroll);
+        });</script>
+    </header>
+
+    <section id="header-bottom" class="parallax-header">
+        <div class="header-main wow fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dispaly-table">
+                            <div class="display-table-cell">
+                                <div class="header-bottom">
+                                    <h1>Bonjour !</h1>
+                                    <h3><span>Je suis</span> Ennajy Mohamed Ayman</h3>
+                                    <p>Développeur Web</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-thum-area wow fadeInLeft">
+                        <div class="about-img">
+                            <img src="img/ay.png" alt="Modèle de CV">
+                        </div>
+                        <div class="resume-btn">
+                            <a href="cv final strandar.pdf"><i class="fa fa-cloud-download"></i> Télécharger le CV</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about-content-area wow fadeInRight">
+                        <div class="section-title">
+                            <h2>À propos de moi</h2>
+                        </div>
+                        <p>
+                            Bonjour, je suis Ennajy Mohamed Ayman, un développeur web spécialisé dans les technologies front-end et back-end. Avec des compétences en HTML, CSS, JavaScript, PHP, et des frameworks comme React et Redux, je me concentre sur la création d'applications web dynamiques et réactives. Mon expérience de stage chez 'Bureau Global Technology' et ma formation au 'Moulik Group' ont affiné mes compétences techniques et ma capacité à collaborer de manière professionnelle. Connectons-nous et créons ensemble de grandes solutions web !
+                        </p>
+                        <ul class="profile-menu">
+                            <li><span>Nom : </span> Ennajy Mohamed Ayman</li>
+                            <li><span>Nationalité : </span> Marocaine</li>
+                            <li><span>Adresse : </span> Marrakech, Maroc</li>
+                            <li><span>Téléphone : </span> +212 701265968</li>
+                            <li><span>E-Mail : </span> ayman93011@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interest-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>Mes intérêts</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="interests-content">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class="fas fa-code"></i>
+                                        <p>Codage</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-plane"></i>
+                                        <p>Voyages</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-music"></i>
+                                        <p>Musique</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-coffee"></i>
+                                        <p>Café</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class='fas fa-swimmer '></i>
+                                        <p>Natation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fas fa-gamepad"></i>
+                                        <p>Jeux</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Éducation</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="educaton-content">
+                        <div class="cd-timeline">
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>Technicien spécialisé en développement informatique</h2>
+                                        <p> 2022 - 2024 </p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        Ce diplôme m'a donné une formation solide en technologies de l'information, m'a passionné pour le développement logiciel et web, et m'a fourni une expérience pratique grâce à des stages qui ont renforcé mes compétences techniques et professionnelles.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>HTML, CSS, et Javascript pour développeurs web</h2>
+                                        <p><span>Université Johns Hopkins</span> | 2023</p>
+                                    </div>
+                                    <span class="cd-description wow fadeInLeft" style="text-align:justify;">
+                                        Cette certification a fourni une formation complète sur les technologies essentielles du développement web. Les compétences acquises incluent :
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <br>Renforcement des capacités de développement front-end, permettant la création de sites modernes et conviviaux.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>Introduction au développement back-end</h2>
+                                        <p>2023 | <span>Meta</span></p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        Cette certification démontre une compréhension solide des concepts de développement back-end, y compris la logique côté serveur, les bases de données et les API.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>Programmation en Python</h2>
+                                        <p><span>Meta</span> | 2023</p>
+                                    </div>
+                                    <span class="cd-description wow fadeInLeft" style="text-align:justify;">
+                                        J'ai obtenu la certification "Programmation en Python" de Meta, ce qui témoigne de ma maîtrise de Python. Les compétences incluent :
+                                        <li>Écriture de code Python propre et efficace</li>
+                                        <li>Algorithmes et structures de données</li>
+                                        <li>Utilisation des bibliothèques Python pour diverses applications</li>
+                                        <li>Résolution de problèmes en développement logiciel</li>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Expérience professionnelle</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="experience-content">
+                        <div class="cd-timeline">
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>Projet final : Cesaro</h2>
+                                        <p>JAN 2024 - JUN 2024 | <span>Creative Alien</span></p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        <li>Développement des spécifications et identification des besoins commerciaux.</li>
+                                        <li>Création de sites web front-end et back-end.</li>
+                                        <li>Conception de base de données efficace pour gérer les informations.</li>
+                                        <li>Correction d'erreurs et tests de fonctionnalités.</li>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>Stage - ICF</h2>
+                                        <p><span>Développeur web</span> | FÉV 2011 - MAR 2012</p>
+                                    </div>
+                                    <span style="text-align:justify;" class="cd-description wow fadeInLeft">
+                                        <li>Création d'interfaces utilisateurs avec HTML, CSS et Bootstrap.</li>
+                                        <li>Tests des fonctionnalités du tableau de bord d'un site immobilier.</li>
+                                        <li>Ajout de produits et maintenance régulière du contenu du site.</li>
+                                        <li>Maintien de sites web pour performance optimale.</li>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pro-skills-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Compétences professionnelles</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-area-middle">
+            <div class="container">
+                <div class="skills-content">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="skillst5">
+                                <div class="skillbar" data-percent="95%">
+                                    <div class="title">HTML 5</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="75%">
+                                    <div class="title">JavaScript</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="95%">
+                                    <div class="title">PHP</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">Bootstrap</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="skillst5 float-right">
+                                <div class="skillbar" data-percent="70%">
+                                    <div class="title">Python</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="80%">
+                                    <div class="title">Photoshop</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">CSS</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">Pack Office</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="skill-bottom-content">
+                            <div class="single-skill-bottom wow fadeInUp">
+                                <h2>02.</h2>
+                                <h3>Back-end</h3>
+                                <p>Je suis un développeur back-end avec expérience en PHP, JavaScript et bases de données. Mon objectif est de créer des applications web efficaces et évolutives.</p>
+                            </div>
+                            <div class="single-skill-bottom sin-skill-middle wow fadeInDown">
+                                <h2>01.</h2>
+                                <h3>Front-end</h3>
+                                <p>Je suis un développeur front-end avec expertise en HTML, CSS et JavaScript. Mon objectif est de créer des interfaces réactives et conviviales.</p>
+                            </div>
+                            <div class="single-skill-bottom wow fadeInUp">
+                                <h2>03.</h2>
+                                <h3>Design</h3>
+                                <p>Je suis un designer axé sur la création de designs modernes, centrés sur l'utilisateur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Quelques-unes de mes œuvres</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <style>
+            
+                /* Slider Container */
+            .slider {
+              width: 80%;
+              margin: 0 auto;
+              overflow: hidden;
+              position: relative;
+            }
+            
+            /* Slides Wrapper */
+            .slides {
+              display: flex;
+              transition: transform 0.5s ease-in-out;
+              width: 200%; /* Since we have 2 slides */
+            }
+            
+            /* Individual Slide */
+            .slide {
+              display: flex;
+              width: 50%; /* Two slides per view */
+              padding-bottom: 47px;
+            }
+            
+            .slide-content {
+              width: 50%; /* Two content blocks per slide */
+              padding: 0 20px;
+              text-align: center;
+            }
+            
+            .slide-content img {
+              width: 100%;
+              border-radius: 10px 10px 0px 0px;
+              height: 95%;
+            }
+            
+            .slide-content h3 {
+             
+              color: #fff;
+            }
+            
+            
+            /* Navigation Dots */
+            .dots {
+              text-align: center;
+              margin-top: 10px;
+            }
+            
+            .dot {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              margin: 5px;
+              background: #bbb;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+            
+            .dot.active {
+              background: #f90;
+            }
+            .btn-3d-hover {
+              display: inline-block;
+              position: relative;
+              padding: 25px 0;
+              font-size: 18px;
+              color: white;
+              text-decoration: none;
+              font-family: Arial, sans-serif;
+              font-weight: 100;
+              transition: color 0.3s ease;
+            }
+            
+            .btn-3d-hover::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 12px;
+              background-color: #06b990;
+              transition: all 0.3s ease;
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+            
+            .btn-3d-hover:hover::after {
+              transform: scaleX(0);
+              transform-origin: left;
+            }
+            
+            .btn-3d-hover:hover {
+              color: #fff;
+              
+            }
+            
+            .btn-3d-hover:hover {
+                font-weight: bold;
+              display: inline-block;
+              padding: 15px 30px;
+              background: linear-gradient(145deg, #0cedda, #06b990);
+              border-radius: 10px;
+              box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.2);
+              transition: all 0.5s ease;
+            }
+            
+            .btn-3d-hover:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.3);
+            }
+            
+            .btn-3d-hover:active {
+              transform: translateY(0);
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+            }
+            .titre1{
+                background-color: #313131;
+    
+            }
+            .h3clas{
+                font-weight: bold;
+                padding: 22px;
+                font-size: 24px;
+            }
+            </style>
+               
+            <div class="portfolio-container" id="slid">
+                <div class="slider" >
+                    <div class="slides">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img src="img/cesarofull.png" alt="Crypto Landing Page">
+                                <div class="titre1" style="display: flex; justify-content: space-around;">
+                                    <h3 class="h3clas" style="float: left;">CESARO</h3>
+                                    <a class="btn-3d-hover" style="float: right;" href="http://ennajy-ma.free.nf/index.php">Visitez le site Web</a>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="slide-content">
+                                <img src="img/empire.png" alt="Crypto Landing Page">
+                                <div class="titre1" style="display: flex; justify-content: space-around;">
+                                    <h3 class="h3clas" style="float: left;">Empire dental</h3>
+                                    <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/empire-dental/">Visitez le site Web</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img src="img/ponctvoyage.png" alt="Crypto Landing Page">
+                                <div class="titre1" style="display: flex; justify-content: space-around;">
+                                    <h3 class="h3clas" style="float: left;">ponctuel Voyage</h3>
+                                    <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/ponctuelVoyage/">Visitez le site Web</a>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <img src="img/soumatravel.png" alt="Crypto Landing Page">
+                                <div class="titre1" style="display: flex; justify-content: space-around;">
+                                    <h3 class="h3clas" style="float: left;">Souma-travel</h3>
+                                    <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/soumatravel/">Visitez le site Web</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Dots -->
+                    
+                    
+                </div>
+                <div class="dots" >
+                    <span class="dot active"></span>
+            <span class="dot"></span>
+                </div>
+            
+            <script>
+            const slides = document.querySelector('.slides');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+            const totalSlides = 2; // Since we have two main groups (1-2 and 3-4)
+            
+            // Function to update the active slide and dot
+            function showSlide(index) {
+                currentIndex = index; // Update currentIndex with the index passed
+                slides.style.transform = `translateX(-${index * 50}%)`; // 50% for 2 elements per slide
+                dots.forEach(dot => dot.classList.remove('active')); // Remove 'active' class from all dots
+                dots[index].classList.add('active'); // Add 'active' class to the current dot
+            }
+            
+            // Auto-slide every 5 seconds and loop back to the first slide
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first after the last
+                showSlide(currentIndex);
+            }, 5000);
+            
+            // Handle dot navigation: when clicking a dot, go to the corresponding slide
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index); // Go to the clicked slide
+                });
+            });
+            </script>
+            <div class="container">
+                <!----
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="portfolio-items">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/souma.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/souma.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/soumatravel/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://aymanennajy.github.io/soumatravel/'> <h4 id="link-sit">Souma travel</h4></a>
+                                                <p>Site de voyages</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/cesaro.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/cesaro.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='http://ennajy-ma.free.nf/index.php'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='http://ennajy-ma.free.nf/index.php'> <h4 id="link-sit">CESARO</h4></a>
+                                                <p>Site de carrelage et de robinetterie</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/extra villa.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/extra villa.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://extravilla-marrakech.vercel.app/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://extravilla-marrakech.vercel.app/'> <h4 id="link-sit">ExtraVilla Marrakech</h4></a>
+                                                <p>Site immobilier</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/iPhone-13-PRO-.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/iPhone-13-PRO-.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/empire-dental/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://aymanennajy.github.io/empire-dental/'> <h4 id="link-sit">Empire dental center</h4></a>
+                                                <p>Centre dentaire</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/ponctuelvoyage.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/ponctuelvoyage.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/ponctuelVoyage/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://aymanennajy.github.io/ponctuelVoyage/'> <h4 id="link-sit">ponctuelvoyage</h4></a>
+                                                <p>Site de voyages</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/ezoriz.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/ezoriz.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/ezhorizon/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://aymanennajy.github.io/ezhorizon/'> <h4 id="link-sit">Ez HORIZONS</h4></a>
+                                                <p>Site immobilier</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portfolio-btn">
+                            <a href='portfolio.html'> Voire plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Témoignages de clients</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="testimonail-content owl-carousel">
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\para triplea (5).png" alt="ComeOut" class="client-thum">
+                            <h3>Anass</h3>
+                            <p>Le site web créé par ennajy mohamed ayman pour notre parapharmacie est fantastique ! Il est facile à utiliser, visuellement magnifique, et a considérablement amélioré nos ventes en ligne. Je recommande vivement EMA pour son professionnalisme et son excellent travail.</p>
+                        </div>
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\log.png" alt="ComeOut" class="client-thum">
+                            <h3>Souma travel</h3>
+                            <p>Nous sommes très satisfaits du site que M. Ennajy Mohammed Ayman a développé pour notre agence de voyages. Il est attrayant, facile à naviguer et présente magnifiquement nos destinations. L'expertise d'EMA a vraiment amélioré notre présence en ligne. Je le recommande vivement !</p>
+                        </div>
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\im1.png" alt="ComeOut" class="client-thum">
+                            <h3>EZ HORIZONS</h3>
+                            <p>La page de destination conçue par ennajy med ayman pour la vente de nos appartements a changé la donne. Elle est moderne et capte efficacement les prospects. Nous avons constaté une augmentation notable des demandes depuis son lancement. Excellent travail !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="message-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="message-content wow fadeInUp">
+                        <div class="hire-content" style="    padding-right: 17px;">
+                            <h2>EMBAUCHEZ-MOI POUR VOTRE PROJET INCROYABLE</h2>
+                            <p>Je suis disponible pour des projets freelance qui dépendent de la valeur de votre projet. Embauchez-moi et obtenez votre projet réalisé !</p>
+                        </div>
+                        <div class="hire-btn">
+                            <a href="https://wa.me/+212701265968?text=Hello%20there!" target="_blank">travaillons ensemble! </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-area" class="section-padding">
+        <div class="container" style="padding-top: 150px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Contactez-moi</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xkgwyvkl" method="POST">
+                            <div class="col-md-6">
+                                <input type="text" name="nom" id="nom" placeholder="Nom complet">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div><br><br><br>
+                            <div class="col-md-12">
+                                <textarea style="text-align: center; justify-content:center;" name="message" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                            </div>
+                            <button type="submit" name="" id="">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-social-link">
+                        <ul class="footer-icons">
+                            <li><a href="https://www.instagram.com/webdevlop_design/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/med-ayman-ennajy-1689a0258/"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="copyright-area text-center">
+                        <p>EMA &copy; <script>document.write(new Date().getFullYear());</script>. TOUS DROITS RÉSERVÉS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll" data-toggle="tooltip" data-placement="top" title="Retour en haut">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/plugins/parallax.min.js"></script>
+    <script type="text/javascript" src="js/plugins/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/plugins/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/plugins/wow.min.js"></script>
+    <script type="text/javascript" src="js/plugins/appear.js"></script>
+    <script type="text/javascript" src="js/plugins/isotope.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/plugins/contact_me.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
