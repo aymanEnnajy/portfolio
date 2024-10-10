@@ -1,0 +1,1328 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<!--Created by med ayman-->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Portfolio Ennajy Mohamed Ayman</title>
+    <link rel="stylesheet" 
+  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+
+    <meta name="description" content="ComeOut - HTML5 Portfolio CV/Resume Template,CV Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <!--=== Styelesheet Css ===-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+
+<body id="content">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!--===============================================================================-->
+
+    <!--====== Preloader Start ======-->
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <img src="img/preloader.svg" alt="Divergent Studio">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--====== Preloader End ======-->
+
+    <!--====== Header Start ======-->
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo" >
+                <img class="logo" src="logo.png" style="width: 120px;" alt="">
+                
+            </label>
+            
+            
+            <ul class="ul">
+                
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#about-area">About</a></li>
+                <li><a href="#education-area">Education</a></li>
+                <li><a href="#experience-area">Experience</a></li>
+                <li><a href="#pro-skills-area">Skills</a></li>
+                
+                <li><a href="#slid">project</a></li>
+                <li>
+                    <div class="custom-select">
+                        <div class="select-selected"><img style="width: 30px;" src="img/etats-unis.png" alt=""></div>
+                        <div class="select-items">
+                            <div data-url="homeFR.html"><img src="img/france.png" alt="Page 1"> Frensh</div>
+                            <div data-url="index.html"><img src="img/etats-unis.png" alt="Page 2">English</div>
+                            
+                        </div>
+                    </div>
+                
+                </li>
+            </ul>
+        </nav>
+        <script>
+            document.querySelector('.select-selected').addEventListener('click', function() {
+                this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            document.querySelectorAll('.select-items div').forEach(item => {
+                item.addEventListener('click', function() {
+                    const url = this.getAttribute('data-url');
+                    if (url) {
+                        window.location.href = url; // Redirect to the selected page
+                    }
+                });
+            });
+    
+            // Close the dropdown if clicked outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.custom-select')) {
+                    document.querySelector('.select-items').style.display = 'none';
+                }
+            });
+        </script>
+        <style>
+            
+            .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+}
+
+.custom-select:hover .select-items {
+    display: block; /* Show dropdown on hover */
+}
+
+.select-items {
+    position: absolute;
+    background-color: #313131;
+    border: 1px solid #313131;
+    z-index: 99;
+    display: none;
+    width: 130px; /* Adjust this width as needed */
+    right: 0; /* Align the dropdown to the left */
+}
+
+.select-items div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.select-items div img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.select-items div:hover {
+    background-color: #ddd;
+}
+
+        </style>
+        <style>
+      /*      @media screen and (min-width: 1034px) {
+    #do li a {
+        font-size: 13px;
+    }
+    .logo{
+        width: 80px;
+    }
+}*/
+#logos{
+    width: 120px;
+}
+@media screen and (min-width: 951px) {
+    #do li a {
+        padding: 16px;
+    }}
+    @media screen and (min-width: 774px) {
+    #logos{
+        width: 80px;
+    }
+    #do li a{
+        padding: 15px;
+    }
+}
+@media screen and (min-width: 769px) {
+    #logos{
+        width: 78px;
+    }
+    #do li a{
+        padding: 15px;
+    }
+}
+   
+            @media screen and (min-width: 992px) {
+                header nav{
+                    position: fixed;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        background: black;
+        left: 0;
+        transition: all 0.2s ease 0s;
+                }
+            }
+  nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+  }
+  
+ 
+  
+  .ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ul li {
+    margin-right: 20px;
+  }
+  
+  .ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15.5px;
+    transition: color 0.3s, background-color 0.3s;
+
+    padding: 24px;
+  }
+  @media only screen and (max-width:991px) {
+    .custom-select{
+        width: 21px;
+    }
+  }
+  @media only screen and (max-width:949px) {
+                .ul li a{
+                    font-size: 13px;
+                }
+                .ul li {
+    margin-right: 0px;
+}
+            }
+            @media only screen and (max-width:829px) {
+                .custom-select{
+                    width: 37px;
+                }
+            } 
+ @media only screen and (max-width:772px) {
+    .ul li a{
+        padding: 19px;
+    }
+ }            
+  
+  .ul li a:hover {
+    color: lightgreen;
+    
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+  
+    ul {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: black;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+  }
+  .ul li a:hover,
+        .ul li a.active {
+            background-color: rgb(90 90 90); /* Background color for active link */
+            color: white; /* Change text color to black for better contrast */
+            
+        }
+        
+        </style>
+        <script> document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            function changeNavbarOnScroll() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeNavbarOnScroll();
+            window.addEventListener('scroll', changeNavbarOnScroll);
+        });</script>
+    </header>
+    
+
+    <!--====== Header End ======-->
+
+    <!--====== Off Canvas Menu Start ======-->
+    
+    <!--====== Off Canvas Menu End ======-->
+
+    <!--====== HeaderBottom Start ======-->
+    <section id="header-bottom" class="parallax-header">
+        <div class="header-main wow fadeInUp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dispaly-table">
+                            <div class="display-table-cell">
+                                <div class="header-bottom">
+                                    <h1>Hello!</h1>
+                                    <h3><span>I'm</span> Ennajy Mohamed Ayman</h3>
+                                    <p>Web Developer </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== HeaderBottom End ======-->
+
+    <!--====== About Area Start ======-->
+    <section id="about-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-thum-area wow fadeInLeft">
+                        <div class="about-img">
+                            <img src="img/ay.png" alt="Resume Template">
+                        </div>
+                        <div class="resume-btn">
+                            <a href="cv final strandar.pdf"><i class="fa fa-cloud-download"></i> Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="about-content-area wow fadeInRight">
+                        <div class="section-title">
+                            <h2>About Me</h2>
+                        </div>
+
+                        <p>
+
+                            Hello, I'm Ennajy Mohamed Ayman, a web developer specializing in both front-end and back-end technologies. With expertise in HTML, CSS, JavaScript, PHP, and frameworks like React and Redux, I focus on building dynamic, responsive web applications. I've worked on various projects, including shopping carts and category-based product displays, and am committed to creating seamless user experiences.
+                            
+                            My stage experience at 'Bureau Global Technology' and education at 'Moulik Group' have sharpened my technical skills and professional collaboration abilities. Let's connect and create great web solutions together!</p>
+
+                        <ul class="profile-menu">
+                            <li><span>Name: </span> Ennajy Mohamed Ayman</li>
+                            
+                            <li><span>Nationality: </span> moroccan</li>
+                            <li><span>Address: </span> Marrakech, moroccan</li>
+                            <li><span>Phone: </span> +212 701265968</li>
+                            <li><span>E-Mail: </span> ayman93011@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== About Area End ======-->
+
+    <!--====== My Interest Area Start ======-->
+    <section id="interest-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="section-title">
+                        <h2>My interests</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="interests-content">
+                        <div class="row">
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class="fas fa-code"></i>
+
+                                        <p>coding</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-plane"></i>
+
+                                        <p>Travel</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-music"></i>
+
+                                        <p>Music</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fa fa-coffee"></i>
+
+                                        <p>Coffee</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInUp">
+                                    <div class="interest-item-content">
+                                        <i class='fas fa-swimmer ' ></i>
+                                        <p>swimming</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+
+                            <!--Single My Interest Start-->
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="interest-item wow fadeInDown">
+                                    <div class="interest-item-content">
+                                        <i class="fas fa-gamepad"></i>
+
+                                        <p>Gaming</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Single My Interest End-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== My Interest Area End ======-->
+
+    <!--====== Education Area Start ======-->
+    <section id="education-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Education</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="educaton-content">
+                        <div class="cd-timeline">
+                            <!--===Single Education Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>specialized technician in IT development</h2>
+                                        <p> 2022 - 2024 </p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        This diploma gave me a solid training in information technology, it made me passionate about software and website development, it also gave me practical experience through internships which strengthened my technical and professional skills.
+                                    </span>
+                                </div>
+                            </div>
+                            <!--===Single Education End===-->
+
+                            <!--===Single Education Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>HTML, CSS, and Javascript for Web Developers</h2>
+                                        <p><span>Johns Hopkins University</span> | 2023</p>
+                                    </div>
+                                    <span class="cd-description wow fadeInLeft" style="text-align:justify ;">
+                                        This certification provided comprehensive training in essential web development technologies. Key skills acquired include:
+                                        <li>html</li>
+                                        <li>css</li>
+                                        <li>javascript</li>
+                                        <br>Strengthened front-end development capabilities, enabling the creation of modern, user-friendly websites.
+
+
+
+                                    </span>
+                                </div>
+                            </div>
+                            <!--===Single Education End===-->
+
+                            <!--===Single Education Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>
+                                            Introduction to Back-End Development</h2>
+                                        <p>2023 | <span>Meta</span></p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        This certification demonstrates a strong understanding of back-end development concepts, including server-side logic, databases, and APIs. It covers essential 
+                                        technologies and best practices for building robust and scalable back-end systems.
+                                        With this certification, I have gained knowledge in:
+                                    
+                                          <li>Server-side programming</li>
+                                          <li>Database management</li>
+                                          <li>API development</li>
+                                          <li>Security and performance optimization</li>
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                            <!--===Single Education End===-->
+
+                            <!--===Single Education Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>Programming in Python</h2>
+                                        <p><span>Meta</span> | 2023</p>
+                                    </div>
+                                    <span class="cd-description wow fadeInLeft" style="text-align: justify;">
+                                        I obtained the "Programming in Python" certification from Meta, which demonstrates my proficiency in Python programming. This certification reflects my ability to:
+                                        <li>Write clean and efficient Python code</li>
+                                        <li>Understand and implement algorithms and data structures</li>
+                                        <li>Utilize Python libraries for various applications, including data manipulation and web development
+                                        </li>
+                                        <li>Develop problem-solving skills essential for software development</li>
+                                    </span>
+                                </div>
+                            </div>
+                            <!--===Single Education End===-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Education Area End ======-->
+
+    <!--====== Experience Area Start ======-->
+    <section id="experience-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Work Experience</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="experience-content">
+                        <div class="cd-timeline">
+                            <!--===Single Experience Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInLeft">
+                                        <h2>final project: cesaro</h2>
+                                        <p>JAN 2024 - JUN 2024 | <span>creative alien</span></p>
+                                    </div>
+                                    <span class="cd-description wow fadeInRight">
+                                        <li>
+
+                                         Specification Development: Identification and specification of business and product requirements for the project.
+                                        </li><li>
+
+                                         Website Creation from A to Z: Development of front-end (HTML, CSS, Bootstrap) and back-end (PHP, MySQL) parts.
+                                        </li><li>
+
+                                         Database Design: Implementation of a robust database to efficiently manage information.
+                                        </li><li>
+
+                                         Error Resolution: Identification and correction of errors to ensure the reliability of the site.
+                                        </li><li>
+
+                                         Functionality Testing</li>
+                                    </span>
+                                </div>
+                            </div> <br><br>
+                            <!--===Single Experience End===-->
+
+                            <!--===Single Experience Start===-->
+                            <div class="cd-timeline-block">
+                                <div class="cd-timeline-img">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="cd-timeline-content">
+                                    <div class="cd-heading wow fadeInRight">
+                                        <h2>Stage - ICF</h2>
+                                        <p><span>Web developer</span> | FEB 2011 - MAR 2012</p>
+                                    </div>
+                                    <span style="text-align:justify;" class="cd-description wow fadeInLeft">
+                                        <li>
+
+                                         Creating the front-end of websites using HTML, CSS and Bootstrap to ensure attractive and functional user interfaces.
+                                        </li><li>
+
+                                         Testing dashboard features for a real estate website to verify their proper functioning and identify bugs.
+                                        </li><li>
+
+                                         Adding products to a website while ensuring the accuracy of information and regular updating of content.
+                                        </li><li>
+
+                                         Maintaining websites with a particular focus on the front-end part to ensure optimal performance and a smooth user experience
+                                    </li></span>
+                                </div>
+                            </div>
+                            <!--===Single Experience End===-->
+
+                            <!--===Single Experience Start===-->
+                            
+                            <!--===Single Experience End===-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Experience Area End ======-->
+
+    <!--====== Skill Area Start ======-->
+    <section id="pro-skills-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Professional Skills</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-area-middle">
+            <div class="container">
+                <div class="skills-content">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="skillst5">
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="95%">
+                                    <div class="title">HTML 5</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="75%">
+                                    <div class="title">javascript</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="95%">
+                                    <div class="title">php</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">bootstrap</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="skillst5 float-right">
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="70%">
+                                    <div class="title">Python</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="80%">
+                                    <div class="title">photoshop</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+
+                                <!--=== Single Skill Strat ===-->
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">Css</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skillbar" data-percent="90%">
+                                    <div class="title">Pack office</div>
+                                    <div class="count-bar color-1">
+                                        <div class="count"></div>
+                                    </div>
+                                </div>
+                                <!--=== Single Skill End ===-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-area-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="skill-bottom-content">
+                            <div class="single-skill-bottom wow fadeInUp">
+                                <h2>02.</h2>
+                                <h3>Back-end</h3>
+                                <p> I am a back-end developer with experience in PHP, JavaScript, and databases. I focus on building efficient, scalable web applications and continually expanding my skills in back-end development.</p>
+                            </div>
+
+                            <div class="single-skill-bottom sin-skill-middle wow fadeInDown">
+                                <h2>01.</h2>
+                                <h3>front-end</h3>
+                                <p>I am a front-end developer with expertise in HTML, CSS, and JavaScript. I focus on creating responsive, user-friendly interfaces and continuously improving my skills in front-end technologies.</p>
+                            </div>
+
+                            <div class="single-skill-bottom wow fadeInUp">
+                                <h2>03.</h2>
+                                <h3> DESIGN</h3>
+                                <p>I am a designer with a focus on creating visually appealing and user-centered designs. I strive to deliver clean, modern aesthetics while enhancing the user experience across digital platforms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Skill Area End ======-->
+
+    <!--====== Portfolio Area Start ======-->
+    <section id="portfolio-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Some Of My Works</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            
+            /* Slider Container */
+        .slider {
+          width: 80%;
+          margin: 0 auto;
+          overflow: hidden;
+          position: relative;
+        }
+        
+        /* Slides Wrapper */
+        .slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          width: 200%; /* Since we have 2 slides */
+        }
+        
+        /* Individual Slide */
+        .slide {
+          display: flex;
+          width: 50%; /* Two slides per view */
+          padding-bottom: 47px;
+        }
+        
+        .slide-content {
+          width: 50%; /* Two content blocks per slide */
+          padding: 0 20px;
+          text-align: center;
+        }
+        
+        .slide-content img {
+          width: 100%;
+          border-radius: 10px 10px 0px 0px;
+          height: 95%;
+        }
+        
+        .slide-content h3 {
+         
+          color: #fff;
+        }
+        
+        
+        /* Navigation Dots */
+        .dots {
+          text-align: center;
+          margin-top: 10px;
+        }
+        
+        .dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+          background: #bbb;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        .dot.active {
+          background: #f90;
+        }
+        .btn-3d-hover {
+          display: inline-block;
+          position: relative;
+          padding: 25px 0;
+          font-size: 18px;
+          color: white;
+          text-decoration: none;
+          font-family: Arial, sans-serif;
+          font-weight: 100;
+          transition: color 0.3s ease;
+        }
+        
+        .btn-3d-hover::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 12px;
+          background-color: #06b990;
+          transition: all 0.3s ease;
+          transform: scaleX(1);
+          transform-origin: right;
+        }
+        
+        .btn-3d-hover:hover::after {
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+        
+        .btn-3d-hover:hover {
+          color: #fff;
+          
+        }
+        
+        .btn-3d-hover:hover {
+            font-weight: bold;
+          display: inline-block;
+          padding: 15px 30px;
+          background: linear-gradient(145deg, #0cedda, #06b990);
+          border-radius: 10px;
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.2);
+          transition: all 0.5s ease;
+        }
+        
+        .btn-3d-hover:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-3d-hover:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+        }
+        .titre1{
+            background-color: #313131;
+
+        }
+        .h3clas{
+            font-weight: bold;
+            padding: 22px;
+            font-size: 24px;
+        }
+        </style>
+           
+        <div class="portfolio-container" id="slid">
+            <div class="slider">
+                <div class="slides">
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="img/cesarofull.png" alt="Crypto Landing Page">
+                            <div class="titre1" style="display: flex; justify-content: space-around;">
+                                <h3 class="h3clas" style="float: left;">CESARO</h3>
+                                <a class="btn-3d-hover" style="float: right;" href="http://ennajy-ma.free.nf/index.php">Visit the website</a>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="slide-content">
+                            <img src="img/empire.png" alt="Crypto Landing Page">
+                            <div class="titre1" style="display: flex; justify-content: space-around;">
+                                <h3 class="h3clas" style="float: left;">Empire dental</h3>
+                                <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/empire-dental/">Visit the website</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <img src="img/ponctvoyage.png" alt="Crypto Landing Page">
+                            <div class="titre1" style="display: flex; justify-content: space-around;">
+                                <h3 class="h3clas" style="float: left;">ponctuel Voyage</h3>
+                                <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/ponctuelVoyage/">Visit the website</a>
+                            </div>
+                        </div>
+                        <div class="slide-content">
+                            <img src="img/soumatravel.png" alt="Crypto Landing Page">
+                            <div class="titre1" style="display: flex; justify-content: space-around;">
+                                <h3 class="h3clas" style="float: left;">Souma-travel</h3>
+                                <a class="btn-3d-hover" style="float: right;" href="https://aymanennajy.github.io/soumatravel/">Visit the website</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Dots -->
+                
+                
+            </div>
+            <div class="dots" >
+                <span class="dot active"></span>
+        <span class="dot"></span>
+            </div>
+        
+        <script>
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = 2; // Since we have two main groups (1-2 and 3-4)
+        
+        // Function to update the active slide and dot
+        function showSlide(index) {
+            currentIndex = index; // Update currentIndex with the index passed
+            slides.style.transform = `translateX(-${index * 50}%)`; // 50% for 2 elements per slide
+            dots.forEach(dot => dot.classList.remove('active')); // Remove 'active' class from all dots
+            dots[index].classList.add('active'); // Add 'active' class to the current dot
+        }
+        
+        // Auto-slide every 5 seconds and loop back to the first slide
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first after the last
+            showSlide(currentIndex);
+        }, 5000);
+        
+        // Handle dot navigation: when clicking a dot, go to the corresponding slide
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index); // Go to the clicked slide
+            });
+        });
+        </script>
+        
+            <div class="container">
+                <!--
+                    <div class="row">
+                    
+                        <div class="col-md-10 col-md-offset-1">
+                        <div class="portfolio-items">
+                            <div class="row">
+                                
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/souma.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/souma.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/soumatravel/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a  href='https://aymanennajy.github.io/soumatravel/'><h4 id="link-sit">Souma travel</h4>
+                                                </a>                                 <p>travel website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/cesaro.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/cesaro.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='http://ennajy-ma.free.nf/index.php'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a  href='http://ennajy-ma.free.nf/index.php'><h4 id="link-sit">CESARO</h4></a>
+                                                <p>tile and faucet website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/extra villa.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/extra villa.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://extravilla-marrakech.vercel.app/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a  href='https://extravilla-marrakech.vercel.app/'><h4 id="link-sit">ExtraVilla Marrakech</h4></a>
+                                                <p>Real estate website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/iPhone-13-PRO-.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/iPhone-13-PRO-.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/empire-dental/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a  href='https://aymanennajy.github.io/empire-dental/'><h4 id="link-sit">Empire dental center</h4></a>
+                                                <p>dental center</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/ponctuelvoyage.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/ponctuelvoyage.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/ponctuelVoyage/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a  href='https://aymanennajy.github.io/ponctuelVoyage/'><h4 id="link-sit"> ponctuelvoyage</h4></a>
+                                                <p>travel website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thum">
+                                            <img id="imgprod" src="img/ezoriz.png" alt="Raju Ahammad">
+                                        </div>
+                                        <div class="portfolio-hover text-center">
+                                            <div class="port-btn-hvr">
+                                                <a href="img/ezoriz.png" class="image-link"><i class="fa fa-search-plus"></i></a>
+                                                <a href='https://aymanennajy.github.io/ezhorizon/'><i class="fa fa-link"></i></a>
+                                            </div>
+                                            <div class="port-meta">
+                                                <a href='https://aymanennajy.github.io/ezhorizon/'><h4 id="link-sit">Ez HORIZONS</h4></a>
+                                                <p>Real estate website</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div style="display: flex; justify-content:space-around;">
+                                <div class="btn1">
+                                    <style>
+                .btn1{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #22252c;
+                    
+                    width: 50%;
+                    height: 55px;
+                }
+                #morePrj{
+                    color: white;
+                    font-size: 19px;
+                }
+                .btn1:hover{
+                    background-color: #4f5053;
+                    cursor: pointer;
+                }
+                #morePrj:hover{
+                    font-weight: bold;
+                }
+                                    </style>
+                                    <a id="morePrj" href="single-portfolio.html" >see more project </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                -->
+                
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portfolio-btn">
+                            <a href='portfolio.html'>Load More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--====== Portfolio Area End ======-->
+
+    <!--====== Testinonial Area Start ======-->
+    <section id="testimonial-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>CLIENT TESTIMONIALS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="testimonail-content owl-carousel">
+                        <!--=== Single Testinonial Start ===-->
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\para triplea (5).png" alt="ComeOut" class="client-thum">
+                            <h3>Anass</h3>
+                            <p>The website created by ennajy mohamed ayman for our parapharmacy is fantastic! It’s user-friendly, visually stunning, and has improved our online sales significantly. Highly recommend EMA for their professionalism and excellent work.</p>
+                        </div>
+                        <!--=== Single Testinonial End ===-->
+
+                        <!--=== Single Testinonial Start ===-->
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\log.png" alt="ComeOut" class="client-thum">
+                            <h3>Souma travel</h3>
+                            <p> We are very happy with the website that Mr. Ennajy Mohammed Ayman developed for our travel agency. It is attractive, easy to navigate and beautifully showcases our destinations. EMA's expertise has really enhanced our online presence. I highly recommend him!</p>
+                        </div>
+                        <!--=== Single Testinonial End ===-->
+
+                        <!--=== Single Testinonial Start ===-->
+                        <div class="single-testimonial text-center">
+                            <img src="F:\website_copy\portfolio\comeout.netlify.app\demo\default\img\im1.png" alt="ComeOut" class="client-thum">
+                            <h3>EZ HORIZONS</h3>
+                            <p>"The landing page ennajy med ayman designed for our apartment sales has been a game-changer. It’s sleek, modern, and effectively captures leads. We’ve seen a noticeable increase in inquiries since launch. Excellent work!"</p>
+                        </div>
+                        <!--=== Single Testinonial End ===-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Testinonial Area End ======-->
+
+    <!--====== Message Area Start ======-->
+    <section id="message-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="message-content wow fadeInUp">
+                        <div class="hire-content">
+                            <h2>HIRE ME FOR YOUR AWESOME PROJECT</h2>
+                            <p>I am available for Freelance projects that depends on your project value. Hire me and get your project done!</p>
+                        </div>
+                        <div class="hire-btn">
+                            <a href="https://wa.me/+212701265968?text=Hello%20there!" target="_blank">Hire Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Message Area End ======-->
+
+    <!--====== Blog Area Start ======-->
+    
+    <!--====== Blog Area End ======-->
+
+    <!--====== Contact Area Start ======-->
+    <section id="contact-area" class="section-padding">
+        <div class="container" style="padding-top: 150px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-form">
+                        <form  action="https://formspree.io/f/xkgwyvkl" method="POST">
+                            <div class="col-md-6">
+                                <input type="text" name="nom" id="nom" placeholder="full name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" id="email" placeholder="email">
+                            </div> <br><br><br>
+                            
+                            <div class="col-md-12">
+                                <textarea style="text-align: center; justify-content:center;" name="message" id="" cols="30" rows="10" placeholder="your message"></textarea>
+                            </div>
+                            
+                            <button type="submit" name="" id="">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== Contact Area End ======-->
+
+    <!--====== Footer Area Start ======-->
+    <footer id="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-social-link">
+                        <ul class="footer-icons">
+                            <li><a href="https://www.instagram.com/webdevlop_design/"><i class="fa fa-instagram"></i></a></li>
+
+                            <li><a href="https://www.linkedin.com/in/med-ayman-ennajy-1689a0258/"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="copyright-area text-center">
+                        <p>EMA &copy; <script>document.write(new Date().getFullYear());</script>. ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--====== Footer Area End ======-->
+
+    <!--====== Back To Top Section Start ======-->
+    <div id="scroll" data-toggle="tooltip" data-placement="top" title="Back To Top">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <!--====== Back To Top Section End ======-->
+
+    <!--==================================================================-->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!--=== All Plugin ===-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/plugins/parallax.min.js"></script>
+    <script type="text/javascript" src="js/plugins/magnific-popup.min.js"></script>
+    <script type="text/javascript" src="js/plugins/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/plugins/wow.min.js"></script>
+    <script type="text/javascript" src="js/plugins/appear.js"></script>
+    <script type="text/javascript" src="js/plugins/isotope.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/plugins/contact_me.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+
+<!-- Mirrored from comeout.netlify.app/demo/default/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 20:19:26 GMT -->
+</html>
